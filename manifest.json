@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "JIRA Assignee Filters",
+  "description": "Filter JIRA board issues by assignee.",
+  "version": "1.0.0",
+  "author": "Murray Smith <murray@mismith.info>",
+
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.atlassian.net/*"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "*://*.atlassian.net/*"
+  ]
+}
